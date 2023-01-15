@@ -1,0 +1,27 @@
+@import "../../variables";
+.ExtendingBar__bar{
+  & > * {
+    span{
+      color: $orange;
+    }
+  }
+}
+.ExtendingBar__content{
+  position: absolute;
+  z-index: 10;
+  background-color: $bg-gray;
+  padding: 10px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 4px $gray;
+  max-height: 300px;
+  overflow-y: scroll;
+  &-creation{
+    display: flex;
+    gap: 5px;
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

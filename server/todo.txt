@@ -1,0 +1,10 @@
+`sudo apt install postgresql postgresql-contrib`
+check status `service postgresql status`
+enter to psql sudo `sudo -i -u postgres`
+enter to psql `psql`
+exit the psql `exit`
+create database `createdb $name` (cuprumbase)
+delete database `dropdb $name`
+enter to psql -> change pwd to sudopsql ALTER USER postgres WITH PASSWORD 'simple';
+create user -> CREATE USER $name WITH PASSWORD 'password';
+grant all rules to new user -> ALTER USER cuprum_root WITH SUPERUSER;

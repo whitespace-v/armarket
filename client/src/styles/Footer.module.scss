@@ -1,0 +1,43 @@
+@import "variables";
+.Footer{
+  background-color: $gray;
+  border-radius: 12px 12px 0 0;
+  &-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+  &-row{
+    border-top: 1px solid white;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  &__column{
+    & > *:hover{
+      color: $bg-gray;
+    }
+    &-phone{
+      display: flex;
+      align-items: center;
+      & > *:hover{
+        color: $bg-gray;
+      }
+      p{
+        color: $bg-gray;
+      }
+    }
+  }
+}
+@media(max-width: 930px) {
+  .Footer{
+    &-container{
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+    &__column{
+      width: 200px;
+    }
+  }
+}

@@ -1,0 +1,200 @@
+@import "../variables";
+.ItemCards{
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+  &__item{
+    cursor: pointer;
+    width: 315px;
+    background: $gray ;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    box-shadow: 0 4px 4px $gray;
+    padding: 20px;
+    &-vendor{
+      font-size: 14px;
+      color: $dark-white;
+      text-align: right;
+      margin: 0 10px 5px 0;
+    }
+    &-image{
+      width: 100px;
+      height: 100px;
+      background-size: cover;
+      margin: 0 auto;
+      border-radius: 6px;
+    }
+    &-name{
+      font-size: 16px;
+      font-weight: 400;
+      color: $white;
+      margin: 10px 0 20px 0;
+    }
+    &-description{
+      font-size: 14px;
+      //width: 200px;
+      color: $dark-white;
+      height: 90px;
+    }
+    &-availability{
+      margin: 20px 0;
+      color: $white;
+      span{
+        color: $orange;
+      }
+    }
+    &-mark{
+      background-color: $bg-gray;
+      width: fit-content;
+      padding: 5px 10px;
+      margin-top: 10px;
+      border-radius: 6px;
+      color: $white;
+      &-stars {
+        display: flex;
+        &-full {
+          color: $orange;
+        }
+        &-empty{
+          color: $white;
+        }
+        &-full,&-empty{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        &-mark{
+          margin-left: 5px;
+        }
+      }
+    }
+    &-buttons{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 5px;
+      &-sale{
+        display: flex;
+        &-current{
+          font-weight: 600;
+          color: $orange;
+          font-size: 32px;
+        }
+        &-old{
+          color: $gray;
+          font-size: 18px;
+          text-decoration: line-through;
+        }
+      }
+      &-price{
+        font-weight: 600;
+        font-size: 24px;
+        color: $white;
+        white-space: nowrap;
+      }
+      &-interactions{
+        display: flex;
+        gap: 10px;
+        margin-left: 10px;
+        &-add{
+          cursor: pointer;
+          font-size: 28px;
+          background-color: $bg-gray;
+          color: $white;
+          padding: 10px;
+          display: flex;
+          justify-content: center;
+          border-radius: 6px;
+          transition: all linear 200ms;
+        }
+        &-add:hover{
+          background-color: $orange;
+          color: $white;
+        }
+        &-add:active, &-add:focus{
+          background-color: $gray;
+          color: $white;
+          transition: none;
+        }
+        &-count{
+          background-color: $bg-gray;
+          padding: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          border-radius: 6px;
+          font-size: 24px;
+          &-handler{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 0;
+            font-weight: bold;
+            color: $orange;
+            cursor: pointer;
+          }
+          &-handler:hover{
+            color: $gray;
+          }
+          &-number{
+            background-color: transparent;
+            outline: none;
+            width: 50px;
+            font-size: 24px;
+            color: $white;
+            border: none;
+            border-bottom: 2px solid $white;
+            text-align: center;
+            user-select: none;
+          }
+        }
+      }
+    }
+  }
+  &__item:hover{
+    box-shadow: 0 8px 8px $gray;
+    transition: all linear 100ms;
+  }
+}
+
+@media (max-width: 1695px) {
+  .ItemCards{
+    &__item{
+      width: calc(50px + (398 - 50) * ((100vw - 320px) / (1695 - 320)));
+    }
+  }
+}
+@media (max-width: 1465px) {
+  .ItemCards{
+    &__item{
+      width: calc(70px + (460 - 70) * ((100vw - 320px) / (1465 - 320)));
+    }
+  }
+}
+@media (max-width: 950px) {
+  .ItemCards{
+    &__item{
+      width: calc(120px + (445  - 120) * ((100vw - 320px) / (950 - 320)));
+    }
+  }
+}
+@media (max-width: 600px) {
+  .ItemCards{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    &__item{
+      width: 100%;
+      &-flex{
+        display: flex;
+        gap: 10px;
+      }
+      &-image{
+        flex-shrink: 0;
+        margin: unset;
+      }
+    }
+  }
+}
