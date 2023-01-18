@@ -1,0 +1,14 @@
+.Contacts{
+  color: white;
+  &__column{
+    margin-top: 50px;
+    &-credentials{
+      p{
+        display: inline;
+      }
+      span{
+        color: gray;
+      }
+    }
+  }
+}

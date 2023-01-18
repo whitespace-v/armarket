@@ -1,0 +1,27 @@
+@import '../variables';
+.Accordion{
+  &-button{
+    border: 2px solid $bg-gray;
+    padding: 20px;
+    border-radius: 6px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  &-body{
+    position: absolute;
+    background-color: $bg-gray;
+    border: 2px solid white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 24px;
+    &__child{
+      cursor: pointer;
+    }
+    &__child:hover{
+      color: $orange;
+    }
+  }
+}

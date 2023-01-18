@@ -1,0 +1,31 @@
+@import "../../variables";
+.ExtendingBarsLayout{
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+  //position: relative;
+  &-filters{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.5);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-items{
+      padding: 20px;
+      background: $bg-gray;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px
+    }
+  }
+}
+@media (max-width: 555px) {
+  .ExtendingBarsLayout{
+    flex-direction: column;
+  }
+}

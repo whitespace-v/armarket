@@ -1,0 +1,68 @@
+@import "../../variables";
+.ItemCardsLoader{
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+  &__item{
+    width: 315px;
+    background: $gray;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    box-shadow: 0 4px 4px $gray;
+    padding: 20px;
+    &-image{
+      margin: 0 auto;
+    }
+    &-name{
+      margin: 10px 0 20px 0;
+    }
+    &-mark{
+      margin: 20px 0;
+    }
+    &-price{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+@media (max-width: 1695px) {
+  .ItemCardsLoader{
+    &__item{
+      width: calc(50px + (398 - 50) * ((100vw - 320px) / (1695 - 320)));
+    }
+  }
+}
+@media (max-width: 1465px) {
+  .ItemCardsLoader{
+    &__item{
+      width: calc(70px + (460 - 70) * ((100vw - 320px) / (1465 - 320)));
+    }
+  }
+}
+@media (max-width: 950px) {
+  .ItemCardsLoader{
+    &__item{
+      width: calc(120px + (445  - 120) * ((100vw - 320px) / (950 - 320)));
+    }
+  }
+}
+@media (max-width: 600px) {
+  .ItemCardsLoader{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    &__item{
+      width: 100%;
+      &-flex{
+        display: flex;
+        gap: 10px;
+      }
+      &-image{
+        flex-shrink: 0;
+        margin: unset;
+      }
+    }
+  }
+}

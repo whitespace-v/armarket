@@ -1,0 +1,32 @@
+@import "../variables";
+.UIInput{
+  position: relative;
+  width: fit-content;
+  & > * {
+    font-size: 16px;
+    padding: 1.2rem 0;
+    font-weight: 500;
+    text-indent: 16px;
+  }
+  input{
+    outline: none;
+    background-color: #fff;
+    border-radius: 6px;
+    border: transparent;
+    font-weight: 500;
+    color: $black;
+    height: 1rem;
+    width: 100%;
+  }
+  &-placeholder{
+    color: $gray;
+    position: absolute;
+    pointer-events: none;
+    top: 50%;
+    margin: auto;
+    transform: translateY(-50%);
+  }
+}
+.UIInput input:valid + .UIInput-placeholder {
+  display: none;
+}
