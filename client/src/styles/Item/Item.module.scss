@@ -1,0 +1,227 @@
+@import '../variables';
+.Item{
+  margin-bottom: 50px;
+  &__name{
+    font-size: 32px;
+    font-weight: 600;
+    color: $white;
+    margin: 20px 0;
+  }
+  &__card{
+    background-color: $gray;
+    border-radius: 6px;
+    padding: 10px;
+    display: flex;
+    gap: 50px;
+    &-images{
+      display: flex;
+      height: 500px;
+      &-extended{
+        box-shadow: inset -5px -5px 5px black;
+        padding: 10px;
+        border-radius: 12px;
+        background-color: $bg-gray;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        //box-shadow
+        overflow: hidden;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        &-item{
+          flex-shrink: 0;
+          width: 130px;
+          height: 130px;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: 50%,50%;
+          border: 2px solid transparent;
+          border-radius: 6px;
+        }
+        &-item:hover{
+          border: 2px solid $orange;
+        }
+      }
+      &-main{
+        width: 500px;
+        height: 500px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 50%,50%;
+        border-radius: 12px;
+        margin: 0 20px;
+      }
+    }
+    &-info{
+      &-availability{
+        color: white;
+        margin: 10px 0;
+      }
+      &-sizes{
+        color: white;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+        &-item{
+        }
+      }
+      &-description{
+        color: $white;
+        font-size: 24px;
+      }
+      &-vendor{
+        color: $dark-white;
+        margin: 10px 0;
+      }
+      &-price{
+        font-size: 24px;
+        font-weight: 600;
+        color: $white;
+        margin: 20px 0;
+      }
+      &-setComment{
+        &-container{
+          display: flex;
+          gap: 5px;
+        }
+        &-mark{
+          margin-left: 20px;
+          display: flex;
+          gap: 5px;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          span{
+            font-size: 18px;
+            color: $white;
+            font-weight: 500;
+          }
+          &-full{
+            color: $orange;
+          }
+          &-empty:hover, &-full:hover{
+            color: $bg-gray;
+          }
+        }
+        &-buttons{
+          display: flex;
+        }
+      }
+      &-commentsTitle{
+        font-size: 24px;
+        color: $white;
+        margin-top: 20px;
+      }
+      &-comments{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 6px;
+        background-color: $bg-gray;
+        &-item{
+          color: $white;
+          width: 100%;
+          padding: 10px;
+          background-color: $gray;
+          border-radius: 6px;
+          font-size: 16px;
+          display: flex;
+          justify-content: space-between;
+          gap: 5px;
+          &-mark{
+            display: flex;
+            justify-content: center;
+            &-full{
+              color: $orange;
+            }
+          }
+        }
+        &-empty{
+          font-size: 16px;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .Item{
+    &__card{
+      flex-direction: column;
+    }
+  }
+}
+@media (max-width: 750px) {
+  .Item{
+    &__card{
+      &-images{
+        flex-direction: column;
+        gap: 20px;
+        flex-shrink: 0;
+        &-main{
+          margin: 0 auto;
+          width: calc(300px + (500  - 300) * ((100vw - 320px) / (750 - 320)));
+        }
+        &-extended{
+          order: 5;
+          flex-direction: row;
+          overflow-x: scroll;
+          overflow-y: hidden;
+          gap: 10px;
+          height: fit-content;
+          padding: 40px 20px;
+        }
+      }
+      &-info{
+        &-setComment{
+          &-container{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+          }
+          &-mark{
+            margin-right: auto;
+            margin-left: 0;
+          }
+          &-buttons{
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+}
+.Accordion{
+  &-button{
+    border: 2px solid $bg-gray;
+    padding: 20px;
+    border-radius: 6px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  &-body{
+    position: absolute;
+    background-color: $bg-gray;
+    border: 2px solid white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 24px;
+    &__child{
+      cursor: pointer;
+    }
+    &__child:hover{
+      color: $orange;
+    }
+  }
+}

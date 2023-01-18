@@ -1,0 +1,71 @@
+@import "../variables";
+.UIButton{
+  width: fit-content;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 200ms;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  white-space: nowrap;
+}
+.primary{
+  font-size: 24px;
+  color: $orange;
+}
+.primary-small{
+  background-color: $gray;
+}
+.primary:hover{
+  color: #fff;
+  background-color: $orange;
+}
+.primary-small:hover{
+  color: $bg-gray;
+  background-color: $white;
+}
+
+.primary:active,.primary:focus{
+  color: #fff;
+  background-color: $gray;
+  transition: none;
+}
+.primary-small-active{
+  background: $orange;
+  color: $bg-gray;
+}
+
+.primary-small:active,.primary-small:focus{
+  color: #fff;
+  background-color: $orange;
+  transition: none;
+}
+.link, .link-active, .icon{
+  background: none;
+}
+.link:hover {
+  color: $gray;
+}
+.icon:hover{
+  color: $orange;
+}
+.link:active,.link:focus, {
+  color: $orange;
+  transition: none;
+}
+.link-active{
+  color: $orange;
+  transition: none;
+}
+.icon{
+  color: $white;
+  padding: 10px 0 10px 20px;
+}
+.icon-active{
+  color: $orange;
+  padding: 10px 0 10px 20px;
+}

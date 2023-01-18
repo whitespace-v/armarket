@@ -1,0 +1,79 @@
+@import "../variables";
+.NavBar{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &-nav{
+    display: flex;
+    gap: 20px;
+    & > * {
+      padding: 20px 0;
+    }
+  }
+  &-burger{
+    &-button{
+      & > *{
+        font-size: 24px;
+      }
+    }
+    &-sidebar{
+      position: fixed;
+      z-index: 9;
+      top: 0;
+      left: 0;
+      width: fit-content;
+      height: 100vh;
+      background-color: $gray;
+      padding: 20px;
+      box-shadow: 5px 15px 10px #000;
+      &.entering{
+        animation: appearing 500ms ease-in-out forwards;
+      }
+      &.exiting{
+        animation: appearing 500ms ease-in-out alternate-reverse;
+      }
+      &-items{
+        &-logo{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          margin-bottom: 30px;
+        }
+        &-message{
+          margin: 20px;
+          & > *{
+            background-color: $bg-gray;
+          }
+        }
+      }
+    }
+  }
+  &-contact{
+    display: flex;
+  }
+  &-contact{
+    &-message{
+      & > *{
+        color: $orange;
+      }
+      & > *:hover{
+        background-color: $white;
+        color: $black;
+      }
+      & > *:focus, & > *:active{
+        background-color: gray;
+        color: $white;
+      }
+    }
+  }
+}
+@keyframes appearing {
+  0%{
+    transform: translateX(-300px);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}

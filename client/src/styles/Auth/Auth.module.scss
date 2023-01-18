@@ -1,0 +1,20 @@
+.Auth{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  &__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    &-name{
+      font-size: 34px;
+      color: white;
+    }
+    &-buttons{
+      display: flex;
+    }
+  }
+}

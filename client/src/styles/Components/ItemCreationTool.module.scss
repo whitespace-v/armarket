@@ -1,0 +1,17 @@
+@import "../variables";
+.ItemCreationTool{
+  width: fit-content;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 4px $gray;
+  margin: 10px 0;
+  &-creation{
+    &-buttons{
+      display: flex;
+      gap: 20px;
+    }
+  }
+}
